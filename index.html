@@ -1,72 +1,65 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>evoMIND</title>
+
+<style>
+    body {
+        font-family: monospace;
+        background: #f5f5f5;
+        color: #222;
+        padding: 40px;
+        text-align: center;
+    }
+    suite {
+        display: block;
+        font-size: 32px;
+        margin-bottom: 20px;
+        font-weight: bold;
+    }
+    slide {
+        display: block;
+        font-size: 18px;
+        margin-bottom: 20px;
+        opacity: 0.7;
+    }
+    .puzzle {
+        font-size: 26px;
+        padding: 20px;
+        border: 2px dashed #444;
+        display: inline-block;
+        margin-top: 20px;
+    }
+</style>
+</head>
+
+<body>
+
 <suite>evoMIND</suite>
 <slide>dimension.flow()</slide>
 
-<div class="puzzle" data-piece="evoMIND"></div>
+<div class="puzzle" data-piece="evoMIND">
+    ((( evoMIND dimension.flow() )))
+</div>
 
 <script>
-// READY – Startsignal
-console.log("READY: evoMIND geladen");
+// Sichtbares Startsignal
+console.log("evoMIND geladen");
 
-// WETTE – Identität
-const WETTE = "evoMIND";
+// Engine‑Start (dein System)
+if (window.CUBE_MIND && window.MATRIX9x9) {
+    const start = window.CUBE_MIND.start();
+    console.log("CUBE_MIND:", start);
 
-// SLIDE – Flow x4 / x16
-function SLIDE(level = 4) {
-    console.log("SLIDE aktiviert: x" + level);
-    return { level, stamp: Date.now() };
+    // Sichtbare Ausgabe
+    const out = document.createElement("pre");
+    out.textContent = JSON.stringify(start, null, 2);
+    document.body.appendChild(out);
+} else {
+    console.warn("Engine nicht geladen");
 }
-
-// SYNC – Verzögerung
-import { SYNC } from "./ENGINE/syn.sync";
-
-// ARG – Argument-Start
-function ARG(input) {
-    return { input, stamp: Date.now() };
-}
-
-// ENGINE-START – jetzt stärker
-window.CUBE_MIND = {
-    start() {
-        const map = MATRIX9x9.build();
-
-        return {
-            map,                         // kognitive Karte
-            qi: this.routeQI(map),       // QI-Routing
-            octa: this.routeOCTA(map),   // 8-Wege-Intelligenz
-            pipe: this.routePIPE(map),   // 3/6/9/12 Routing
-            reason: this.reason(map),    // MindCube Reasoning
-            mode: "CUBE-MIND aktiv",
-            stamp: Date.now()
-        };
-    },
-
-    routeQI(map) {
-        return map.matrix.map((row, r) =>
-            row.map((_, c) => r * 9 + c)
-        );
-    },
-
-    routeOCTA(map) {
-        return map.octa;
-    },
-
-    routePIPE(map) {
-        return {
-            tri: map.pipe3,
-            hex: map.pipe6,
-            non: map.pipe9,
-            dode: map.pipe12
-        };
-    },
-
-    reason(map) {
-        return {
-            center: map.matrix[4][4],     // Mittelpunkt ◎
-            flow: "map-then-reason",      // MindCube-Prinzip
-            stamp: Date.now()
-        };
-    }
-};
-
-console.log("evoMIND aktiviert: Core / Plugin / Task");
 </script>
+
+</body>
+</html>
