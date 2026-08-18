@@ -1,27 +1,19 @@
-export const CONNECT = {
-  lan: true,
-  wlan: true,
-  gate: "WLAN-GATE",
-  wloch: "WLOCH-ROUTE",
-  allxall: "ALLXALL-CONNECT",
+// EFFECT.js — Effekte / Reaktionen / Output
 
-  scanRoom(room) {
+export const EFFECT = {
+  pulse(msg) {
     return {
-      room,
-      via: this.wloch,
-      mode: this.allxall,
-      status: "ROOM-SCAN-OK"
+      msg,
+      effect: "PULSE",
+      stamp: Date.now()
     };
   },
 
-  mapPipe(pipe) {
+  flash(msg) {
     return {
-      pipe,
-      link: "LAN/WLAN",
-      gate: this.gate,
-      route: this.wloch,
-      mode: this.allxall,
-      status: "PIPE-MAP-OK"
+      msg,
+      effect: "FLASH",
+      stamp: Date.now()
     };
   }
 };
