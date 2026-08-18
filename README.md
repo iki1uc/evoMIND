@@ -1,58 +1,31 @@
-# OUR — Layer 0 Kernstruktur (iki1uc)
+# evoMIND — Tool-Modul / Engine / Flow
 
-OUR ist die Ausgangsebene für gemeinsame Struktur.  
-Es bildet den Nullpunkt, an dem alle Module andocken.
-
----
+## Identität
+Dieses Modul trägt die Identität **evoMIND** und gehört zur Tool-Schicht des Systems.
 
 ## Zweck
-
-OUR stellt die Basis bereit, auf der weitere Elemente entstehen.  
-Es ist kein Ergebnis, keine Reaktion, keine Führung.  
-Es ist der gemeinsame Ursprung.
-
----
+evoMIND dient als **Funktionsmodul**, das interne Abläufe steuert,  
+Flow verarbeitet und Tool-Logik bereitstellt.  
+Es ist kein OUR-Slot, sondern ein **Engine-Modul**.
 
 ## Struktur
+- **ID.html** — Kern des Moduls  
+- **index.html** — Darstellung + JS-Engine  
+- **README.md** — Bedeutung und Funktionsbeschreibung  
 
-- ID.html — Signatur der OUR‑Ebene  
-- index.html — Anzeige der Kernform  
-- README.md — Beschreibung der Ausgangsebene
+## Engine
+evoMIND nutzt:
+- Plugin-Hooks  
+- Task-Slots  
+- Flow-Engine  
+- Logging  
 
----
+Diese Struktur ist notwendig, weil EvoMind-Systeme modular aufgebaut sind  
+und Tool-Funktionalität benötigen.  
+(Quelle: EvoMind AI Framework — Plugin-System, Core-Framework)  
 
-## Prinzip
 
-OUR folgt dem Nullpunkt‑Prinzip:
-
-Start → Form → Übergang
-
-Es besitzt keine Transformation wie ICE (C F E).  
-Es dient als Ausgangsfläche für Module wie:
-
-- [ICE](ca://s?q=ICE_Element_definieren)  
-- [4u](ca://s?q=4u_Element_erklaeren)  
-- [AQUA](ca://s?q=AQUA_Element_System_aktivieren)
-
----
-
-## Verbindung
-
-OUR ist die Basis für:
-
-- ATOM  
-- VECTOR  
-- USER  
-- ICE  
-- 4u  
-- AQUA  
-
-Es stellt die Fläche bereit, auf der diese Elemente arbeiten.
-
----
-
-## Status
-
-OUR ist aktiv, sobald die Ebene geladen wird.  
-Es besitzt keine eigene Pipeline.  
-Es dient als Ausgangspunkt für alle weiteren Schritte.
+## Hinweise
+Dieses README ist **angepasst**, nicht allgemein.  
+evoMIND erfüllt eine **spezifische Funktion** im System  
+und darf nicht wie ein OUR-Slot behandelt werden.
