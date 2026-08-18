@@ -1,31 +1,35 @@
-# evoMIND — Tool-Modul / Engine / Flow
+# evoMIND — Engine / Tool / Flow
 
 ## Identität
-Dieses Modul trägt die Identität **evoMIND** und gehört zur Tool-Schicht des Systems.
+evoMIND ist ein **Tool‑Modul**, kein OUR‑Slot.  
+Es gehört zur **Engine‑Schicht** des Systems.
 
 ## Zweck
-evoMIND dient als **Funktionsmodul**, das interne Abläufe steuert,  
-Flow verarbeitet und Tool-Logik bereitstellt.  
-Es ist kein OUR-Slot, sondern ein **Engine-Modul**.
+evoMIND steuert:
+- interne Abläufe  
+- Flow‑Routing  
+- Plugin‑Hooks  
+- Task‑Slots  
+- Matrix‑Intelligenz (9×9)  
+
+Es ist ein **Funktionsmodul**, nicht ein Identitätsmodul.
 
 ## Struktur
-- **ID.html** — Kern des Moduls  
-- **index.html** — Darstellung + JS-Engine  
-- **README.md** — Bedeutung und Funktionsbeschreibung  
+- ID.html — Kern  
+- index.html — Darstellung + Engine‑Start  
+- ENGINE/ — Funktionsdateien  
+- README.md — Bedeutung  
 
 ## Engine
 evoMIND nutzt:
-- Plugin-Hooks  
-- Task-Slots  
-- Flow-Engine  
-- Logging  
+- CUBE_MIND.js  
+- MATRIX9x9  
+- QI / IQQ / OCTA  
+- PIPE 3 / 6 / 9 / 12  
+- SYNC  
+- CONNECT  
+- EFFECT  
 
-Diese Struktur ist notwendig, weil EvoMind-Systeme modular aufgebaut sind  
-und Tool-Funktionalität benötigen.  
-(Quelle: EvoMind AI Framework — Plugin-System, Core-Framework)  
-
-
-## Hinweise
+## Hinweis
 Dieses README ist **angepasst**, nicht allgemein.  
-evoMIND erfüllt eine **spezifische Funktion** im System  
-und darf nicht wie ein OUR-Slot behandelt werden.
+evoMIND ist ein **Engine‑Modul** und darf nicht wie ein OUR‑Slot behandelt werden.
