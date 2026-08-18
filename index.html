@@ -1,8 +1,38 @@
 <suite>evoMIND</suite>
 <slide>dimension.flow()</slide>
+
 <div class="puzzle" data-piece="evoMIND"></div>
 
 <script>
-// Tool-Core für evoMIND
+// READY – Startsignal
+console.log("READY: evoMIND geladen");
+
+// WETTE – Identität
+const WETTE = "evoMIND";
+
+// SLIDE – Flow x4 / x16
+function SLIDE(level = 4) {
+    console.log("SLIDE aktiviert: x" + level);
+}
+
+// SYNC – Verzögerung
+import { SYNC } from "./ENGINE/syn.sync";
+
+// ARG – Argument-Start
+function ARG(input) {
+    return { input, stamp: Date.now() };
+}
+
+// ENGINE-START
+window.CUBE_MIND = {
+    start() {
+        return {
+            matrix: MATRIX9x9.build(),
+            mode: "KI-Modus aktiv",
+            stamp: Date.now()
+        };
+    }
+};
+
 console.log("evoMIND aktiviert: Core / Plugin / Task");
 </script>
